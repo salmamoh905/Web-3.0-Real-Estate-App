@@ -10,5 +10,22 @@ interface IERC721 {
 }
 
 contract Escrow {
+    //store settings and with that we will create state variables and keep track of blockchain addressess
+    // i.e Seller, Lender, Inspector, Appraiser, Buyer
 
+    address public lender;
+    address public inspector;
+    address payable public seller;
+    address public appraiser;
+    address public nftAddres;
+    //setting the variable values = and for that we have to use Constructor
+    constructor(address _lender, address _inspector, address _nft, address payable _seller){
+        nftAddres = _nft;
+        seller = _seller;
+        inspector = _inspector;
+        lender = _lender;
+        //we will set the seller as the deployer of the contract
+    }
+
+    
 }
