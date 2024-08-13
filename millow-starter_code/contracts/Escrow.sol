@@ -17,10 +17,10 @@ contract Escrow {
     address public inspector;
     address payable public seller;
     address public appraiser;
-    address public nftAddres;
+    address public nftAddress;
     //setting the variable values = and for that we have to use Constructor
     constructor(address _lender, address _inspector, address _nft, address payable _seller){
-        nftAddres = _nft;
+        nftAddress = _nft;
         seller = _seller;
         inspector = _inspector;
         lender = _lender;
